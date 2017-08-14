@@ -1,0 +1,18 @@
+<%= form_for :upload, url: uploads_path do |f| %>
+	<p>
+		<%= f.label :title %>
+		<br>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :file %>
+		<%= f.file_field :file %>
+	</p>
+
+	<p>
+		<%= f.submit 'Upload' %>
+	</p>
+<% end %>
+
+
