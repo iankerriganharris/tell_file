@@ -21,7 +21,12 @@ class UploadsController < ApplicationController
 	def show
 		@uploaded = Upload.find(params[:id])
 		@raw_contents = Nokogiri::XML(Paperclip.io_adapters.for(@uploaded.file).read)
-		@interfaces = @raw_contents.xpath("//interface//if-item-list//item//physical-if").first
+		@interface_array = Array.new
+		
+		@raw_contents.css("interface physical-if").each do |node|
+			@interface_array << node
+		end
+		@interface_array
 	end
 
 	private

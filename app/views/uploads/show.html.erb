@@ -1,5 +1,10 @@
 <div>
-	<%= @interfaces %>
+	<% @interface_array.each do |int| 
+		int.xpath("./* ").each do |elem| %>
+		<div><%= elem.name %> <%= elem.content %></div>
+	<% end %>
+	<br>
+<% end %>
 </div>
 
 
