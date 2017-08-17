@@ -1,10 +1,12 @@
 <div>
-	<% @interface_array.each do |int| 
-		int.xpath("./* ").each do |elem| %>
-		<div><%= elem.name %> <%= elem.content %></div>
+	<% @test.each do |int| 
+		int.xpath("./* ").each do |elem| 
+			if (elem.name == "if-num") %>
+				<div><%= elem.name %> <%= elem.content %></div>
+			<% end %>
 	<% end %>
 	<br>
 <% end %>
-</div>
+</div> 
 
 

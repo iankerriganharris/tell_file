@@ -22,11 +22,25 @@ class UploadsController < ApplicationController
 		@uploaded = Upload.find(params[:id])
 		@raw_contents = Nokogiri::XML(Paperclip.io_adapters.for(@uploaded.file).read)
 		@interface_array = Array.new
-		
+		@test = Array.new	
+	#	@test_hash = Hash.from_xml(@raw_contents.to_s)
+	#	puts @test_hash
+
 		@raw_contents.css("interface physical-if").each do |node|
-			@interface_array << node
+			@interface_array << Hash.from_xml(node.to_s)
 		end
-		@interface_array
+
+		@interface_array.each do |interface| 
+			interface.values.each do |key|
+					@if_num = key.slice("if_num").values
+					@if_dev_name = key.slice("if_dev_name").values
+					@ip = key.slice("ip").values
+					@netmask = key.slice("netmask").values
+					@default_gateway = key.slice("default_gateway").values
+			end
+		end
+	#	@interface_array.each do |node|
+
 	end
 
 	private
