@@ -1,12 +1,15 @@
-<div>
-	<% @test.each do |int| 
-		int.xpath("./* ").each do |elem| 
-			if (elem.name == "if-num") %>
-				<div><%= elem.name %> <%= elem.content %></div>
-			<% end %>
+<div class="device">
+	<% @sorted_object_array.each do |int| %>
+		<div class="interface">
+			<%= int.name %>
+			<br>
+			<%= int.ipv4_address %>
+			<br>
+			<%= int.netmask %>
+			<br>
+			<%= int.default_gateway %>	
+		</div>
 	<% end %>
-	<br>
-<% end %>
 </div> 
 
 
