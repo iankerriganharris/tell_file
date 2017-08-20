@@ -57,3 +57,6 @@ bower.json
 # Ignore Byebug command history file.
 .byebug_history
 >>>>>>> 961fa4e55bf4646fa34245acad4ecae2b3ab7714
+
+# Ignore application configuration
+/config/application.yml
