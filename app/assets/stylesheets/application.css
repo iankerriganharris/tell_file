@@ -12,4 +12,38 @@
  *
  *= require_tree .
  *= require_self
+ *= require colors
  */
+
+html, body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+.title_box {
+	border-top: medium solid #ff8f87;
+	width: 100%;
+	height: 5rem;
+	box-shadow: 0rem 0.1rem 1rem rgba(0,0,0,0.1);
+	position: relative;
+	color: rgba(0,0,0,.8);
+}
+
+.title_box a {
+	position: absolute;
+	padding-left: 0.5rem;
+	top: 25%;
+	bottom: 25%;
+	font-size: 36pt;
+	text-decoration: none;
+	color: inherit;
+}
+
+.alert {
+	display: flex;
+	background: rgba(214,42,42,0.05);
+	color: rgba(214,42,42,0.85);
+	font-style: italic;
+}

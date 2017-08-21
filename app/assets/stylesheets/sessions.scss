@@ -1,0 +1,27 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.signin_container {
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+	background: rgb(53,108,243);
+	color: white;
+	height: 3rem;
+	width: 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.25rem;
+}
+
+.signin_container a {
+	text-decoration: none;
+	color: inherit;
+}
