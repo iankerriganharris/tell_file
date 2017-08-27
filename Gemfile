@@ -41,6 +41,9 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
+# Permissions
+gem 'cancancan', '~> 2.0'
+
 # ENV
 gem 'figaro'
 

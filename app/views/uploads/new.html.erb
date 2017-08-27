@@ -1,6 +1,7 @@
 <%= form_for :upload, url: uploads_path do |f| %>
 	<p>
 		<%= f.label :title %>
+		<%= f.hidden_field :user_id, :value => current_user.id %>
 		<br>
 		<%= f.text_field :title %>
 	</p>
