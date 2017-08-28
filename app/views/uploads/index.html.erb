@@ -1,6 +1,5 @@
-<%= render :template => 'uploads/new' %>
 
-<div>
+<div class="index_box">
 	<% @uploads.each do |upload| %>
 		<% if can? :read, upload %>	
 		<div>
@@ -8,5 +7,9 @@
 		</div>
 		<% end %>
 	<% end %>
+	<div id="form_box">
+		<%= render :template => 'uploads/new' %>
+	</div>
 </div>
+
 

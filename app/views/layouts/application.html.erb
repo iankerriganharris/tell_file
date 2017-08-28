@@ -6,14 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript">
 	setTimeout("$('.alert').fadeOut('slow')", 5000)
+
+	function displayForm() {
+		document.getElementById("form_box").style.visibility = "visible";
+	}
   </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 		<% if user_signed_in? %>
-			<div class="sign_out_box"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
+			<div class="title_box">
+				<div class="title_button"><%= link_to 'TellFile', root_path %></div>
+				<div class="upload_button" onclick="displayForm()"><a>Upload</a></div>
+				<div class="sign_out_box"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
+			</div>
 		<% else %>
-			<div class="title_box"><%= link_to 'TellFile', new_user_session_path %></div>
+			<div class="title_box">
+				<div class="title_button"><%= link_to 'TellFile', new_user_session_path %></div>
+				<div class="signin_container"></div>
+			</div>
 	<% end %>
 
 

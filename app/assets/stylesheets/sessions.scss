@@ -7,21 +7,24 @@ html, body {
 	padding: 0;
 }
 
-.signin_container {
-	position: absolute;
-	top: 1rem;
-	right: 2rem;
+.signin_container, .sign_out_box {
+	order: 3;
+	justify-content: flex-end;
+	margin-right: 1rem;
 	background: rgb(53,108,243);
 	color: white;
 	height: 3rem;
-	width: 10rem;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 0.25rem;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
 }
 
-.signin_container a {
+.signin_container a, .sign_out_box a {
+	margin: 0 auto;
 	text-decoration: none;
+	text-align: center;
 	color: inherit;
 }
