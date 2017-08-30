@@ -12,6 +12,38 @@
 	flex-flow: row wrap;
 }
 
+#form_top_right_X {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14pt;
+	height: 15%;
+	width: 10%;
+	color: rgba(0,0,0,0.3);
+	flex-direction: right;
+	margin-left: auto;	
+}
+
+#form_top_right_X:hover {
+	background-color: rgba(0,0,0,0.1);
+	color: rgba(0,0,0,1);
+	cursor: pointer;
+}
+
+.upload_box {
+	box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.1);
+	width: 90%;
+	height: 80vh; 
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: right;
+}
+
+.upload_box div {
+	width: 15rem;
+	height: 10rem;
+}
+
 .upload_button {
 	order: 2;
 	margin-right: 1rem;
@@ -37,12 +69,14 @@
 }
 
 #form_box {
+	box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.1);
+	display: flex;
 	visibility: hidden;
-	margin-top: auto;
+	margin-top: 1.5rem;
 	margin-left: auto;
 	margin-right: auto;
-	height: 50%;
-	width: 50%;
+	height: 20vh;
+	width: 90%;
 	background: rgba(102, 191, 12, 0.25);
 }
 
@@ -50,6 +84,8 @@
 	height: 85vh;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .interface {

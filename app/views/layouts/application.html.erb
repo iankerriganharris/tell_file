@@ -10,6 +10,10 @@
 	function displayForm() {
 		document.getElementById("form_box").style.visibility = "visible";
 	}
+
+	function closeBox() {
+		document.getElementById("form_top_right_X").parentElement.style.visibility ="hidden";
+	}
   </script>
   <%= csrf_meta_tags %>
 </head>
@@ -23,16 +27,13 @@
 		<% else %>
 			<div class="title_box">
 				<div class="title_button"><%= link_to 'TellFile', new_user_session_path %></div>
-				<div class="signin_container"></div>
+				<%= yield %>
 			</div>
 	<% end %>
 
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-
-
-<%= yield %>
 
 </body>
 </html>

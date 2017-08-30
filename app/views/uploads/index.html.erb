@@ -1,14 +1,17 @@
 
 <div class="index_box">
+	<div class="upload_box">
 	<% @uploads.each do |upload| %>
 		<% if can? :read, upload %>	
-		<div>
+		<div class="upload_link">
 			<%= link_to upload.title, upload %>
 		</div>
 		<% end %>
 	<% end %>
+	</div>
 	<div id="form_box">
 		<%= render :template => 'uploads/new' %>
+		<div id="form_top_right_X" onclick="closeBox()"><a>X</a></div>
 	</div>
 </div>
 
