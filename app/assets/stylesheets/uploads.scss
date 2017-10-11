@@ -2,8 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .device {
+	box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.1);
 	width: 90%;
+	margin-top: 3rem;
 	margin-left: auto;
 	margin-right: auto;
 	position: center;

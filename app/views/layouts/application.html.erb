@@ -18,17 +18,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-		<% if user_signed_in? %>
+	<% if user_signed_in? %>
 			<div class="title_box">
 				<div class="title_button"><%= link_to 'TellFile', root_path %></div>
 				<div class="upload_button" onclick="displayForm()"><a>Upload</a></div>
 				<div class="sign_out_box"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
 			</div>
-		<% else %>
+			<%= yield %>
+			
+	<% else %>
 			<div class="title_box">
 				<div class="title_button"><%= link_to 'TellFile', new_user_session_path %></div>
 				<%= yield %>
 			</div>
+
 	<% end %>
 
 

@@ -1,6 +1,3 @@
-<div>
-	<%= link_to "Uploads", root_path %>
-</div>
 <div class="device">
 	<% @sorted_object_array.each do |int| %>
 		<div class="interface">
@@ -14,5 +11,9 @@
 		</div>
 	<% end %>
 </div> 
+<div id="form_box">
+	<%= render :template => 'uploads/new' %>
+	<div id="form_top_right_X" onclick="closeBox()"><a>X</a></div>
+</div>
 
 
