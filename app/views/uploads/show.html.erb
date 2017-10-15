@@ -1,7 +1,20 @@
 <div class="device">
+	<div class="system_info">
+		<%= @obj_version_array[0].version %>
+		<% @obj_info_array.each do |info| %>
+			<%= info.model %>
+			<%= info.system_name %>
+		<% end %>
+	</div>
 	<% @sorted_object_array.each do |int| %>
-		<div class="interface">
+		<div class="interface <%= 'enabled' if int.status == '1' %>">
 			<%= int.name %>
+			<br>
+			<% if int.status == '1' %>
+				Enabled
+			<% else %>
+				Disabled
+			<% end %>
 			<br>
 			<%= int.ipv4_address %>
 			<br>
